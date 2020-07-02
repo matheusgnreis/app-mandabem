@@ -1,6 +1,10 @@
-# E-Com Plus Application Starter
+# App Manda Bem
 
-[![Deploy](https://github.com/ecomplus/application-starter/workflows/Deploy/badge.svg)](https://github.com/ecomplus/application-starter/actions?workflow=Deploy) [![Call refresh tokens](https://github.com/ecomplus/application-starter/workflows/Call%20refresh%20tokens/badge.svg)](https://github.com/ecomplus/application-starter/actions?workflow=Call+refresh+tokens) [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy](https://github.com/ecomplus/app-mandabem/workflows/Deploy/badge.svg)](https://github.com/ecomplus/app-mandabem/actions?workflow=Deploy) [![Call refresh tokens](https://github.com/ecomplus/app-mandabem/workflows/Call%20refresh%20tokens/badge.svg)](https://github.com/ecomplus/app-mandabem/actions?workflow=Call+refresh+tokens) [![Publish](https://github.com/ecomplus/app-mandabem/workflows/Publish/badge.svg)](https://github.com/ecomplus/app-mandabem/actions?workflow=Publish) [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+E-Com Plus app to integrate Manda Bem shipping intermediator
+
+# E-Com Plus Application Starter
 
 :dog: Boilerplate for E-Com Plus apps with [Firebase](https://firebase.google.com/) Cloud Functions and GitHub Actions.
 
