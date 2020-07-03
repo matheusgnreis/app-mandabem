@@ -139,6 +139,117 @@ const app = {
      * You can also set any other valid resource/subresource combination.
      * Ref.: https://developers.e-com.plus/docs/api/#/store/
      */
+  },
+
+  admin_settings: {
+    zip: {
+      schema: {
+        type: 'string',
+        maxLength: 9,
+        pattern: '^[0-9]{5}-?[0-9]{3}$',
+        title: 'CEP de origem',
+        description: 'Código postal do remetente para cálculo do frete'
+      },
+      hide: true
+    },
+    shipping_rules: {
+      schema: {
+        title: 'Regras de envio',
+        description: 'Aplicar descontos/adicionais condicionados ou desabilitar regiões',
+        type: 'array',
+        maxItems: 300,
+        items: {
+          title: 'Regra de envio',
+          type: 'object',
+          minProperties: 1,
+          properties: {
+            service: {
+              type: 'string',
+              enum: [
+                'PAC',
+                'SEDEX',
+                'PACMINI'
+              ],
+              default: 'subtotal',
+              title: 'Serviço dos Correios'
+            },
+            zip_range: {
+              title: 'Faixa de CEP',
+              type: 'object',
+              required: [
+                'min',
+                'max'
+              ],
+              properties: {
+                min: {
+                  type: 'integer',
+                  minimum: 10000,
+                  maximum: 999999999,
+                  title: 'CEP inicial'
+                },
+                max: {
+                  type: 'integer',
+                  minimum: 10000,
+                  maximum: 999999999,
+                  title: 'CEP final'
+                }
+              }
+            },
+            min_amount: {
+              type: 'number',
+              minimum: 1,
+              maximum: 999999999,
+              title: 'Valor mínimo da compra'
+            },
+            free_shipping: {
+              type: 'boolean',
+              default: false,
+              title: 'Frete grátis'
+            },
+            discount: {
+              title: 'Desconto',
+              type: 'object',
+              required: [
+                'value'
+              ],
+              properties: {
+                percentage: {
+                  type: 'boolean',
+                  default: false,
+                  title: 'Desconto percentual'
+                },
+                value: {
+                  type: 'number',
+                  minimum: -99999999,
+                  maximum: 99999999,
+                  title: 'Valor do desconto',
+                  description: 'Valor percentual/fixo do desconto ou acréscimo (negativo)'
+                }
+              }
+            }
+          }
+        }
+      },
+      hide: false
+    },
+    mandabem_id: {
+      schema: {
+        type: 'string',
+        maxLength: 255,
+        title: 'Manda Bem API ID',
+        description: 'API ID disponível em https://mandabem.com.br/integracao'
+      },
+      hide: true
+    },
+    mandabem_token: {
+      schema: {
+        type: 'string',
+        maxLength: 255,
+        title: 'Manda Bem API Token',
+        description: 'API Token disponível em https://mandabem.com.br/integracao'
+      },
+      hide: true
+    }
   }
 }
 
