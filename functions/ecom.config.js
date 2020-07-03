@@ -7,8 +7,8 @@
 
 const app = {
   app_id: 119348,
-  title: 'My Awesome E-Com Plus App',
-  slug: 'my-awesome-app',
+  title: 'Manda Bem',
+  slug: 'manda-bem',
   type: 'external',
   state: 'active',
   authentication: true,
@@ -22,7 +22,7 @@ const app = {
      * Triggered to calculate shipping options, must return values and deadlines.
      * Start editing `routes/ecom/modules/calculate-shipping.js`
      */
-    // calculate_shipping:   { enabled: true },
+    calculate_shipping:   { enabled: true },
 
     /**
      * Triggered to validate and apply discount value, must return discount and conditions.
@@ -48,10 +48,10 @@ const app = {
    */
   auth_scope: {
     'stores/me': [
-      'GET'            // Read store info
+      'GET'              // Read store info
     ],
     procedures: [
-      'POST'           // Create procedures to receive webhooks
+      'POST'             // Create procedures to receive webhooks
     ],
     products: [
       // 'GET',           // Read products with public and private fields
@@ -82,7 +82,7 @@ const app = {
       // 'DELETE',        // Delete customers
     ],
     orders: [
-      // 'GET',           // List/read orders with public and private fields
+      'GET',              // List/read orders with public and private fields
       // 'POST',          // Create orders
       // 'PATCH',         // Edit orders
       // 'PUT',           // Overwrite orders
@@ -101,8 +101,12 @@ const app = {
      */
     'orders/fulfillments': [
       // 'GET',           // List/read order fulfillment and tracking events
-      // 'POST',          // Create fulfillment event with new status
+      'POST',             // Create fulfillment event with new status
       // 'DELETE',        // Delete fulfillment event
+    ],
+    'orders/shipping_lines': [
+      'GET',              // List/read order shipping lines
+      'PATCH',            // Edit order shipping line nested object
     ],
     'orders/payments_history': [
       // 'GET',           // List/read order payments history events
@@ -147,6 +151,7 @@ const procedures = []
 
 /**
  * Uncomment and edit code above to configure `triggers` and receive respective `webhooks`:
+ */
 
 const { baseUri } = require('./__env')
 
@@ -154,6 +159,7 @@ procedures.push({
   title: app.title,
 
   triggers: [
+    /*
     // Receive notifications when new order is created:
     {
       resource: 'orders',
@@ -165,11 +171,13 @@ procedures.push({
       resource: 'orders',
       field: 'financial_status',
     },
+    */
     {
       resource: 'orders',
       field: 'fulfillment_status',
     },
 
+    /*
     // Receive notifications when products/variations stock quantity changes:
     {
       resource: 'products',
@@ -194,6 +202,7 @@ procedures.push({
     },
 
     // Feel free to create custom combinations with any Store API resource, subresource, action and field.
+    */
   ],
 
   webhooks: [
@@ -208,6 +217,7 @@ procedures.push({
   ]
 })
 
+/*
  * You may also edit `routes/ecom/webhook.js` to treat notifications properly.
  */
 
