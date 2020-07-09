@@ -87,7 +87,7 @@ exports.post = ({ appSdk }, req, res) => {
     }
 
     // calculate weight and pkg value from items list
-    let finalWeight
+    let finalWeight = 0
     params.items.forEach(({ price, quantity, dimensions, weight }) => {
       let physicalWeight = 0
       let cubicWeight = 1
