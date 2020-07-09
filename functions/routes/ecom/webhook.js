@@ -28,7 +28,7 @@ exports.post = ({ appSdk }, req, res) => {
 
     .then(appData => {
       mandaBemId = appData.mandabem_id
-      mandaBemKey = appData.mandabem_key
+      mandaBemKey = appData.mandabem_token
       if (mandaBemId && mandaBemKey && trigger.resource === 'orders' && !appData.disable_auto_tag) {
         mandaBemRef = appData.mandabem_ref
         // handle order fulfillment status changes
