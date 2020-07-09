@@ -152,6 +152,24 @@ const app = {
       },
       hide: true
     },
+    mandabem_id: {
+      schema: {
+        type: 'string',
+        maxLength: 255,
+        title: 'Manda Bem API ID',
+        description: 'API ID disponível em https://mandabem.com.br/integracao'
+      },
+      hide: true
+    },
+    mandabem_token: {
+      schema: {
+        type: 'string',
+        maxLength: 255,
+        title: 'Manda Bem API Token',
+        description: 'API Token disponível em https://mandabem.com.br/integracao'
+      },
+      hide: true
+    },
     shipping_rules: {
       schema: {
         title: 'Regras de envio',
@@ -232,23 +250,14 @@ const app = {
       },
       hide: false
     },
-    mandabem_id: {
+    disable_auto_tag: {
       schema: {
-        type: 'string',
-        maxLength: 255,
-        title: 'Manda Bem API ID',
-        description: 'API ID disponível em https://mandabem.com.br/integracao'
+        type: 'boolean',
+        default: false,
+        title: 'Desabilitar geração de envios',
+        description: 'Desativa a criação automática de tags de envio via Manda Bem'
       },
-      hide: true
-    },
-    mandabem_token: {
-      schema: {
-        type: 'string',
-        maxLength: 255,
-        title: 'Manda Bem API Token',
-        description: 'API Token disponível em https://mandabem.com.br/integracao'
-      },
-      hide: true
+      hide: false
     }
   }
 }
