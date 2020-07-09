@@ -216,6 +216,12 @@ exports.post = ({ appSdk }, req, res) => {
                 days: 3,
                 ...appData.posting_deadline
               },
+              package: {
+                weight: {
+                  value: finalWeight,
+                  unit: 'kg'
+                }
+              },
               flags: ['mandabem-ws']
             }
 
