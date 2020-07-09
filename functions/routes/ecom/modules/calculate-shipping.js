@@ -17,7 +17,7 @@ exports.post = ({ appSdk }, req, res) => {
   // merge all app options configured by merchant
   const appData = Object.assign({}, application.data, application.hidden_data)
 
-  if (!appData.plataforma_id || !appData.plataforma_chave) {
+  if (!appData.mandabem_id || !appData.mandabem_key) {
     // must have configured Manda Bem ID and key
     return res.status(409).send({
       error: 'CALCULATE_AUTH_ERR',
@@ -157,8 +157,8 @@ exports.post = ({ appSdk }, req, res) => {
 
     // https://mandabem.com.br/documentacao
     const mandabemParams = {
-      plataforma_id: appData.plataforma_id,
-      plataforma_chave: appData.plataforma_chave,
+      plataforma_id: appData.mandabem_id,
+      plataforma_chave: appData.mandabem_key,
       cep_origem: originZip,
       cep_destino: destinationZip,
       valor_seguro: secureValue.toFixed(2),
