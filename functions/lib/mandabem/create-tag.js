@@ -6,10 +6,8 @@ module.exports = (apiId, apiKey, order, refId) => {
   // https://mandabem.com.br/documentacao
   const data = {
     plataforma_id: apiId,
-    plataforma_chave: apiKey
-  }
-  if (refId) {
-    data.ref_id = refId
+    plataforma_chave: apiKey,
+    ref_id: refId || order.number || order._id
   }
 
   // start parsing order body
