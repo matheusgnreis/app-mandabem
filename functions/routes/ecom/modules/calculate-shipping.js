@@ -196,6 +196,7 @@ exports.post = ({ appSdk }, req, res) => {
           }
           if (result && result.resultado && result.resultado[servico]) {
             const { valor, prazo } = result.resultado[servico]
+            const price = parseFloat(valor)
 
             // parse to E-Com Plus shipping line object
             const shippingLine = {
@@ -204,10 +205,10 @@ exports.post = ({ appSdk }, req, res) => {
                 zip: destinationZip
               },
               to: params.to,
-              price: valor,
+              price,
+              total_price: price,
               declared_value: secureValue,
               discount: 0,
-              total_price: valor,
               delivery_time: {
                 days: prazo,
                 working_days: true
