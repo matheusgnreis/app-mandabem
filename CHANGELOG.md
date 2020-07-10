@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2020-07-10)
+
+
+### Features
+
+* **admin-settings:** add admin config options to app config ([3fa3d8f](https://github.com/ecomplus/application-starter/commit/3fa3d8f59dfdca8ec648d1897b071d70b39c53b1))
+* **calculate-shipping:** handling calculate with Manda Bem WS ([571bc14](https://github.com/ecomplus/application-starter/commit/571bc145d053f601d1b936f0476b6d3174138283))
+* **create-tag:** handle ecom webhook to create manda bem tag ([cff4bcf](https://github.com/ecomplus/application-starter/commit/cff4bcf4e67d12294669163b26c7919efa738756))
+* **ecom-app:** setup manda bem app config ([32c011c](https://github.com/ecomplus/application-starter/commit/32c011c3acec624afd16822b0a8d91917e11e0b3))
+
+
+### Bug Fixes
+
+* **calculate-shipping:** edit mandabem credential fields on app data ([dd9d632](https://github.com/ecomplus/application-starter/commit/dd9d6320cfb1dadbeb86c76361f4990ab11ca3f2))
+* **calculate-shipping:** parse calculated price to float (number) ([24d8ce2](https://github.com/ecomplus/application-starter/commit/24d8ce2f361d814e64f546c465e26376e3f57dfd))
+* **calculate-shipping:** preset final weight zero ([d0102a1](https://github.com/ecomplus/application-starter/commit/d0102a13d468f5f914c38ef2306cb068bf9fcfa1))
+* **calculate-shipping:** setting 'package' on shipping line object ([fe0be69](https://github.com/ecomplus/application-starter/commit/fe0be696d2625b66bb818911b36b88181d0babbc))
+* **create-tag:** pass order number or id as ref to manda bem tag ([814a6aa](https://github.com/ecomplus/application-starter/commit/814a6aa2c12a48c365a09cfe05a991d1f32b5932))
+
 ## [1.0.0-starter.14](https://github.com/ecomplus/application-starter/compare/v1.0.0-starter.13...v1.0.0-starter.14) (2020-06-30)
 
 
