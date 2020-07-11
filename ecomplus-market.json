@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "",
-    "short_description": "",
-    "category": "tools"
+    "title": "Manda Bem",
+    "short_description": "Cálculo de frete e automação de etiquetas via Manda Bem",
+    "category": "shipping"
   }
 }
