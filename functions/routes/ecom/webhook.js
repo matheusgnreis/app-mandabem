@@ -29,6 +29,7 @@ exports.post = ({ appSdk }, req, res) => {
     .then(appData => {
       mandaBemId = appData.mandabem_id
       mandaBemKey = appData.mandabem_token
+      console.log(trigger.body)
       if (mandaBemId && mandaBemKey && trigger.resource === 'orders' && !appData.disable_auto_tag) {
         // handle order fulfillment status changes
         const order = trigger.body
@@ -50,7 +51,7 @@ exports.post = ({ appSdk }, req, res) => {
 
     .then(({ response }) => {
       // finally create manda bem tag parsing full order data
-      return createMandaBemTag(mandaBemId, mandaBemKey, response.data)
+      return createMandaBemTag(mandaBemId, mandaBemKey, response.data).then(console.log)
     })
 
     .then(() => {
