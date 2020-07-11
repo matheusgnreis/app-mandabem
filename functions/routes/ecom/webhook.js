@@ -51,10 +51,8 @@ exports.post = ({ appSdk }, req, res) => {
     .then(({ response }) => {
       // finally create manda bem tag parsing full order data
       const order = response.data
-      console.log(`Shipping tag for #${storeId} ${order._id}:`)
-      return createMandaBemTag(mandaBemId, mandaBemKey, order).then(([response]) => {
-        console.log(response.data)
-      })
+      console.log(`Shipping tag for #${storeId} ${order._id}`)
+      return createMandaBemTag(mandaBemId, mandaBemKey, order)
     })
 
     .then(() => {
