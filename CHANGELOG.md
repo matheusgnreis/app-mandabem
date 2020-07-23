@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/ecomplus/application-starter/compare/v1.0.1...v1.0.2) (2020-07-23)
+
+
+### Bug Fixes
+
+* **calculate-shipping:** prevent discount/total with null value ([4ac8755](https://github.com/ecomplus/application-starter/commit/4ac87557c15623af0118e8edf8b16a6e0b0ff6cc))
+
 ### [1.0.1](https://github.com/ecomplus/application-starter/compare/v1.0.0...v1.0.1) (2020-07-11)
 
 ## 1.0.0 (2020-07-10)
