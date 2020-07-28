@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/ecomplus/application-starter/compare/v1.0.3...v1.0.4) (2020-07-28)
+
+
+### Bug Fixes
+
+* **calculate-shipping:** fix working with response object (fix overwrite) ([6990c62](https://github.com/ecomplus/application-starter/commit/6990c62e28dc2e7af432f70af51b75e7d976c9f7))
+
 ### [1.0.3](https://github.com/ecomplus/application-starter/compare/v1.0.2...v1.0.3) (2020-07-28)
 
 
