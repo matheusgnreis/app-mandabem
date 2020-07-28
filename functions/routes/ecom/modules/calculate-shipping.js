@@ -184,8 +184,7 @@ exports.post = ({ appSdk }, req, res) => {
         }
       )
 
-        .then(response => {
-          const { data } = response
+        .then(({ data, status }) => {
           let result
           if (typeof data === 'string') {
             try {
@@ -297,7 +296,7 @@ exports.post = ({ appSdk }, req, res) => {
           } else {
             // console.log(data)
             const err = new Error('Invalid Mandabem calculate response')
-            err.response = response
+            err.response = { data, status }
             throw err
           }
         })
