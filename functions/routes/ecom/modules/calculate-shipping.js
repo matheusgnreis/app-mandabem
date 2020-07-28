@@ -182,7 +182,8 @@ exports.post = ({ appSdk }, req, res) => {
         }
       )
 
-        .then(({ data }) => {
+        .then(response => {
+          const { data } = response
           let result
           if (typeof data === 'string') {
             try {
@@ -291,6 +292,10 @@ exports.post = ({ appSdk }, req, res) => {
               service_name: servico,
               shipping_line: shippingLine
             })
+          } else {
+            const err = new Error('Invalid Mandabem calculate response')
+            err.response = response
+            throw err
           }
         })
 
@@ -309,9 +314,9 @@ exports.post = ({ appSdk }, req, res) => {
             } else {
               result = data
             }
-            if (result && result.resultado && result.resultado.error) {
+            if (result && result.resultado && result.resultado.erro) {
               // Manda Bem error message
-              errorMsg = result.resultado.error
+              errorMsg = result.resultado.erro
               return
             }
             errorMsg = `${err.message} (${err.response.status})`
