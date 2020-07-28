@@ -151,8 +151,10 @@ exports.post = ({ appSdk }, req, res) => {
     })
 
     // pre check for maximum allowed declared value
-    if (secureValue > 10000) {
-      secureValue = 10000
+    if (secureValue < 20.5) {
+      secureValue = 20.5
+    } else if (secureValue > 3000) {
+      secureValue = 3000
     }
 
     // https://mandabem.com.br/documentacao
@@ -293,7 +295,7 @@ exports.post = ({ appSdk }, req, res) => {
               shipping_line: shippingLine
             })
           } else {
-            console.log(data)
+            // console.log(data)
             const err = new Error('Invalid Mandabem calculate response')
             err.response = response
             throw err
@@ -315,10 +317,13 @@ exports.post = ({ appSdk }, req, res) => {
             } else {
               result = data
             }
-            if (result && result.resultado && result.resultado.erro) {
+            if (result && result.resultado) {
               // Manda Bem error message
-              errorMsg = result.resultado.erro
-              return
+              const { error, erro } = result.resultado
+              errorMsg = erro || error
+              if (errorMsg) {
+                return
+              }
             }
             errorMsg = `${err.message} (${err.response.status})`
           }
