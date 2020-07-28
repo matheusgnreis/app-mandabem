@@ -293,6 +293,7 @@ exports.post = ({ appSdk }, req, res) => {
               shipping_line: shippingLine
             })
           } else {
+            console.log(data)
             const err = new Error('Invalid Mandabem calculate response')
             err.response = response
             throw err
