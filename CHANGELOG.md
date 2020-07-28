@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/ecomplus/application-starter/compare/v1.0.2...v1.0.3) (2020-07-28)
+
+
+### Bug Fixes
+
+* **calculate-shipping:** fix handling manda bem error responses ([59dbc39](https://github.com/ecomplus/application-starter/commit/59dbc39006ceeb8b32524d5934ae564ef684e9e1))
+* **calculate-shipping:** fixing secure value range ([d144322](https://github.com/ecomplus/application-starter/commit/d1443224f3bb8126e8e5bc10c2c7faebadaa5801))
+
 ### [1.0.2](https://github.com/ecomplus/application-starter/compare/v1.0.1...v1.0.2) (2020-07-23)
 
 
