@@ -66,7 +66,7 @@ module.exports = (apiId, apiKey, order, refId) => {
                   'Content-Type': 'application/x-www-form-urlencoded'
                 }
               }
-            ).catch(console.error))
+            ).then(() => console.log(`> Manda Bem tag ${data.forma_envio}`)).catch(console.error))
         }
       }
     })
