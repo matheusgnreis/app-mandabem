@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/ecomplus/application-starter/compare/v1.0.4...v1.0.5) (2020-08-10)
+
+
+### Bug Fixes
+
+* **calculate-shipping:** fix returned origin zip code ([ad9541e](https://github.com/ecomplus/application-starter/commit/ad9541e0f078140489d087721ec188d48f364562))
+* **deps:** update all non-major dependencies ([2dc55eb](https://github.com/ecomplus/application-starter/commit/2dc55eb9f34c7bd51d4401c530f22864066133dc))
+
 ### [1.0.4](https://github.com/ecomplus/application-starter/compare/v1.0.3...v1.0.4) (2020-07-28)
 
 
