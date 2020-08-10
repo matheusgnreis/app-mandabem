@@ -204,7 +204,7 @@ exports.post = ({ appSdk }, req, res) => {
             const shippingLine = {
               from: {
                 ...params.from,
-                zip: destinationZip
+                zip: originZip
               },
               to: params.to,
               price,
