@@ -37,6 +37,7 @@ module.exports = (apiId, apiKey, order, refId) => {
             data.destinatario = shippingLine.to.name
             data.cep = shippingLine.to.zip.replace(/\D/g, '')
             data.logradouro = shippingLine.to.street
+            data.bairro = shippingLine.to.borough
             data.numero = shippingLine.to.number || 'SN'
             if (shippingLine.to.complement) {
               data.complemento = shippingLine.to.complement
