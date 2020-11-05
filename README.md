@@ -4,11 +4,11 @@
 
 E-Com Plus app to integrate Manda Bem shipping intermediator
 
+[CHANGELOG](https://github.com/ecomplus/app-mandabem/blob/master/CHANGELOG.md)
+
 # E-Com Plus Application Starter
 
 :dog: Boilerplate for E-Com Plus apps with [Firebase](https://firebase.google.com/) Cloud Functions and GitHub Actions.
-
-[CHANGELOG](https://github.com/ecomplus/application-starter/blob/master/CHANGELOG.md)
 
 ## Getting started
 
