@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/ecomplus/application-starter/compare/v1.0.5...v1.0.6) (2020-11-05)
+
+
+### Bug Fixes
+
+* **create-tag:** add 'bairro' field ([#15](https://github.com/ecomplus/application-starter/issues/15)) ([a54ab50](https://github.com/ecomplus/application-starter/commit/a54ab50117709a2b9ec9a3980ac978f60560b1be))
+* **refresh-tokens:** add scheduled cloud function to run update ([f2fecc6](https://github.com/ecomplus/application-starter/commit/f2fecc67724dfbaa77d69d0045ba8584ea97ad1f))
+
 ### [1.0.5](https://github.com/ecomplus/application-starter/compare/v1.0.4...v1.0.5) (2020-08-10)
 
 

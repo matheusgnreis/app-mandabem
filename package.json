@@ -1,7 +1,7 @@
 {
   "name": "@ecomplus/app-mandabem",
   "private": true,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Boilerplate for E-Com Plus apps with Firebase Cloud Functions",
   "main": "functions/index.js",
   "scripts": {
