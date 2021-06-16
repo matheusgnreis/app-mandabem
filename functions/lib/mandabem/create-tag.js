@@ -57,7 +57,7 @@ module.exports = (apiId, apiKey, order, refId) => {
               data.valor_seguro = shippingLine.declared_value
             }
             data.cep_origem = shippingLine.from.zip.replace(/\D/g, '')
-
+            console.log(JSON.stringify(data))
             // send POST to generate Manda Bem tag
             requests.push(axios.post(
               'https://mandabem.com.br/ws/gerar_envio',
